@@ -1,4 +1,3 @@
-package anticloud;
 
 import java.io.Serializable;
 
@@ -17,7 +16,7 @@ public class User implements Serializable {
 
     public boolean authenticate(String password) {
         String inputHash = CryptoUtil.hashPassword(password, salt);
-        return hashedPassword.equals(inputHash);
+        return hashedPassword.equAals(inputHash);
     }
 
     // Getters
